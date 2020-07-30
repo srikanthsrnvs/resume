@@ -1,0 +1,195 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Srikanth}{Srinivas}{ \urlstyle{same}\href{https://srikanthsrnvs.github.io/website/}{Website} | \href{https://www.linkedin.com/in/srikanthsrnvs/}{LinkedIn}\\
+\href{mailto:srikanth.srinivas@mail.utoronto.ca}{Email} | (647) 983-9837
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{University of Toronto}
+\descript{Computer Science}
+\location{July 2020 | Toronto, Canada}
+Sub focus in deep learning
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Facebook:// \href{https://www.facebook.com/IamGingerTrash}{\bf Srikanth Srinivas} \\
+Github:// \href{https://github.com/srikanthsrnvs}{\bf srikanthsrnvs} \\
+LinkedIn://  \href{https://www.linkedin.com/in/srikanthsrnvs/}{\bf srikanthsrnvs} \\
+Blog://  \href{https://medium.com/@recurseai}{\bf recurseai} \\
+Personal website://  \href{https://srikanthsrnvs.github.io/website/}{\bf Link} \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\location{Over 7000 lines:}
+Javascript \textbullet{}  Swift \textbullet{} Python \\
+\location{Over 1000 lines:}
+C \textbullet{} CSS \textbullet{} Java \textbullet{} HTML \textbullet{} \LaTeX\ \\
+\location{Technologies:}
+\textbullet{} React.js \\
+\textbullet{} Xcode(iOS) \\
+\textbullet{} Node.js \\
+\textbullet{} SQL \\
+\textbullet{} Tensorflow \\
+\textbullet{} Keras\\
+\textbullet{} PyTorch \\
+\textbullet{} Firebase \\
+\textbullet{} Google cloud platform \\
+\textbullet{} Flask\\
+\textbullet{} ROS\\
+\sectionsep
+
+\section{Certificates}
+\subsection{Coursera}
+\location{Nov 2019}
+\textbullet{}Structuring Machine learning projects\\ \textbullet{} Neural networks and deep learning \\
+\textbullet{} Improving deep neural networks: Hyperparameter tuning, Regularization and Optimization
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{Astrum.ai}
+\descript{| Founder }
+\location{Nov 2019 - July 2020 | Toronto, Ontario}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item \textbf{\href{https://www.astrum.ai}{Astrum.ai}} is a no-code AutoML tool written in Python and React, using Tensorflow, Pytorch and Google Cloud
+\item I am the sole engineer, and have built the platform from the ground up
+\item It uses Reinforcement learning, transfer learning, and evolutionary simulations to search for ideal NN architectures
+\item It's currently closed source, and a revenue generating project.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Blip.delivery}
+\descript{| Co-founder }
+\location{May 2017 – Nov 2019 | Toronto, Ontario}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Blip was a same-day delivery API powered by crowd-sourced drivers, written in Reactjs, Node, Swift and Python
+\item \textbf{\href{https://blip-live.firebaseapp.com/#intro}{Wrote Over 10,000 lines of backend API}}
+\item \textbf{\href{https://apps.apple.com/ca/app/blip-driver/id1397140753}{Built an app used by over 300 daily active drivers}}
+\item I was the sole engineer, and built the entire platform from the ground up and scaled it to ~1000 drivers and 20 stores
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Open source
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Side Projects}
+\runsubsection{Autonomous rovers}
+\descript{| Engineer}
+\location{Apr 2019 – Nov 2019 | Toronto, Ontario}
+Built \textbf{\href{https://drive.google.com/drive/u/3/folders/16rhXzpnnE2r-Tf5yzjvB5i6v06zM74ir}{Blippy}} A self driving rover designed to carry 30kgs to perform same-day deliveries.
+\item I engineered the frame, and worked with the low level modbus registers to get it working
+\sectionsep
+
+\runsubsection{PySimplex}
+\descript{| Open-source project}
+\location{Oct 2019 – Oct 2019 | Toronto, Ontario}
+Built a simple \textbf{\href{https://github.com/srikanthsrnvs/pysimplex}{open source module}} to control Modbus motors designed by Simplex Motion. Taught myself the modbus protocol and write it atop PyModbus
+\sectionsep
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
